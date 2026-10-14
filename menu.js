@@ -1,25 +1,11 @@
-/* Pho House — Menu Data
-   ============================================================
-   OWNER: This is the ONLY file you need to edit to change
-   the menu. Change a name, a price, or a description here
-   and the whole site updates — Menu page, cart, rewards,
-   catering stamps, everything.
-   - price: number, no $ sign, e.g. 15.95 — the PICKUP / IN-STORE price
-   - deliveryPrice: number — the DELIVERY price (delivery-app price, higher).
-     The site shows price when Pickup is selected, deliveryPrice when Delivery
-     is selected. Both must be present on every item.
-   - suffix: "+" means "starting at — size / variant upcharge may apply"
-     (used for pho, where the in-store menu shows $15.95+ etc.)
-   - tags: use any of "popular" "veggie" "spicy"
-   - cat: must match one of the category ids below.
-   Do not rename `cat` values unless you also update index.html pills.
-
-   DUAL PRICING: price = in-store / pickup price (source: in-store menu /
-   phohouse.net). deliveryPrice = delivery-app price (source: DoorDash /
-   Allmenus listings). The customer picks Pickup or Delivery and the site
-   shows that price everywhere — menu, cart, checkout. Estimated delivery
-   prices (confirm with owner): Pho OxTails 31.95, Bun Cha 22.50,
-   Sea Salt Vietnamese Drip Coffee 7.95.
+/* Pho House — Menu Data (v2)
+   OWNER: edit names / prices / descriptions here and the whole site updates.
+   - price: PICKUP / IN-STORE price (in-store menu / phohouse.net).
+   - deliveryPrice: DELIVERY price (delivery-app price, higher).
+     Pickup shows price, Delivery shows deliveryPrice.
+   - suffix "+": "starting at" — size / variant upcharge may apply (pho).
+   Estimated delivery prices (confirm with owner): OxTails 31.95, Bun Cha 22.50,
+   Sea Salt Coffee 7.95.
 */
 
 const MENU_CATEGORIES = [
@@ -130,29 +116,26 @@ const MENU = [
   { id: "dessert-flan", name: "Flan", cat: "desserts", price: 5.95, deliveryPrice: 6.95, desc: "Silky caramel flan, chilled and smooth.", tags: ["popular"] },
 ];
 
-/* Site settings — OWNER: edit these to change hours, fees, contact info. */
+/* Site settings — OWNER: edit these to change hours, contact info, rewards demo rates. */
 const SITE = {
   name: "Pho House",
   address: "13073 Wisteria Dr, Germantown, MD 20874",
   phoneDisplay: "(301) 916-5730",
   phoneTel: "+13019165730",
   email: "phohousegermantown@gmail.com",
-  hoursLabel: "Dine-in every day · 10:00 AM – 8:00 PM",
   hoursDineIn: "10:00 AM – 8:00 PM daily",
   hoursPickup: "10:00 AM – 7:50 PM daily",
-  openHour: 10, // 10 AM — dine-in opens
-  closeHour: 20, // 8 PM — dine-in closes
-  pickupCloseHour: 19, // 7 PM hour
-  pickupCloseMinute: 50, // 7:50 PM — last pickup / delivery order
-  taxRate: 0.06, // Montgomery County 6%
-  deliveryFee: 3.99,
-  freeDeliveryOver: 50,
+  openHour: 10,
+  closeHour: 20,
+  pickupCloseHour: 19,
+  pickupCloseMinute: 50,
+  // Rewards — DEMO DEFAULT. Owner sets exact rates in one place.
+  // Shown in the UI as a demo default, not a promise from the restaurant.
   pointsPerDollar: 1,
   pointsForReward: 100,
   rewardValue: 10,
-  birthdayReward: 5,
-  banhMiStampsNeeded: 5, // Buy 5 Get 1 Free = 5 stamps, 6th free
-  serviceAreas: ["Germantown", "Gaithersburg", "Clarksburg", "Montgomery Village", "Boyds", "Clopper", "Middlebrook"],
+  banhMiStampsNeeded: 5,
+  serviceAreas: ["Germantown", "Old Germantown", "Middlebrook", "Neelsville", "Boyds", "Burdette", "Clopper", "Clarksburg", "Brink", "Brownstown", "Gaithersburg", "Blocktown", "Metropolitan Grove", "Montgomery Village", "Bucklodge", "Brown", "Ten Mile Creek", "Prathertown", "Blackrock Mill", "Slidell"],
   mapsEmbed: "https://www.google.com/maps?q=13073+Wisteria+Dr,+Germantown,+MD+20874&output=embed",
   mapsLink: "https://www.google.com/maps/search/?api=1&query=13073+Wisteria+Dr+Germantown+MD+20874",
 };
