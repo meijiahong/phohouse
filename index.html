@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pho House — Vietnamese Restaurant in Germantown, MD | Pho, Banh Mi, Boba</title>
+<meta name="description" content="Pho House in Germantown, MD. Pho, banh mi, spring rolls, Vietnamese coffee, boba and catering. Dine-in 10 AM–8 PM daily. Order pickup or delivery.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1B4332">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pho House">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#view-menu">Skip to menu</a>
+
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a class="logo" href="#home" data-nav="home" aria-label="Pho House home">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 48 48" width="34" height="34"><circle cx="24" cy="24" r="22" fill="#E76F51"/><path d="M14 30c0-6 4-10 10-10s10 4 10 10" stroke="#FFF8F0" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="24" cy="18" r="3" fill="#FFF8F0"/></svg></span>
+      <span class="logo-text"><strong>Pho House</strong><small>Germantown, MD</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" data-nav="home" class="nav-link active">Home</a>
+      <a href="#menu" data-nav="menu" class="nav-link">Menu</a>
+      <a href="#rewards" data-nav="rewards" class="nav-link">Rewards</a>
+      <a href="#catering" data-nav="catering" class="nav-link">Catering</a>
+      <a href="#visit" data-nav="visit" class="nav-link">Visit</a>
+    </nav>
+    <div class="header-actions">
+      <button id="installBtn" class="btn btn-outline btn-sm" hidden>Install App</button>
+      <a class="btn btn-ghost btn-sm" href="tel:+13019165730" aria-label="Call Pho House">(301) 916-5730</a>
+      <button id="cartOpenBtn" class="btn btn-primary btn-sm cart-btn" aria-label="Open cart">Cart <span id="cartCount" class="cart-count">0</span></button>
+    </div>
+    <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  </div>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+    <a href="#home" data-nav="home">Home</a>
+    <a href="#menu" data-nav="menu">Menu</a>
+    <a href="#rewards" data-nav="rewards">Rewards</a>
+    <a href="#catering" data-nav="catering">Catering</a>
+    <a href="#visit" data-nav="visit">Visit</a>
+    <a href="tel:+13019165730">Call (301) 916-5730</a>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ============ HOME ============ -->
+  <section id="view-home" class="view active" aria-label="Home">
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Vietnamese Kitchen · Germantown, MD</p>
+        <h1>Slow-simmered pho.<br>Crisp banh mi.<br>Real Vietnamese coffee.</h1>
+        <p class="hero-sub">A family kitchen on Wisteria Drive serving Germantown, Gaithersburg, Clarksburg and nearby neighborhoods. Dine in, pick up, or get delivery — and earn rewards on every order.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#menu" data-nav="menu">Browse Menu</a>
+          <a class="btn btn-outline btn-lg" href="#rewards" data-nav="rewards">Join Rewards</a>
+        </div>
+        <div class="hero-meta">
+          <span class="badge"><strong>4.6 ★</strong> · Loved locally</span>
+          <span class="badge" id="openNowBadgeHome">Open today 10 AM – 8 PM</span>
+          <span class="badge">Pickup &amp; Delivery</span>
+        </div>
+        <p class="hero-note">13073 Wisteria Dr, Germantown, MD 20874 · <a href="tel:+13019165730">(301) 916-5730</a></p>
+      </div>
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=1200&q=80&auto=format&fit=crop" alt="Bowl of pho with herbs and lime" onerror="this.style.display='none'">
+        <div class="hero-card">
+          <strong>Today</strong>
+          <span id="heroHours">Dine-in 10:00 AM – 8:00 PM</span>
+          <span id="heroPickup">Pickup / Delivery until 7:50 PM</span>
+          <a class="btn btn-primary btn-sm" href="#menu" data-nav="menu">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="promo-strip" role="note">
+        <div><strong>Banh Mi Deal</strong><span>Buy 5 Get 1 Free · To-go only · Stamps tracked in Rewards</span></div>
+        <a class="btn btn-light btn-sm" href="#rewards" data-nav="rewards">Track My Stamps</a>
+      </div>
+
+      <h2 class="section-title">Most loved</h2>
+      <p class="section-sub">Start with the bowls and rolls regulars come back for.</p>
+      <div id="popularGrid" class="card-grid"></div>
+
+      <div class="feature-row">
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?w=900&q=80&auto=format&fit=crop" alt="Vietnamese banh mi sandwich" loading="lazy" onerror="this.style.display='none'">
+          <h3>Banh Mi, toasted to order</h3>
+          <p>Crisp baguette, pickled carrots and radish, cucumber, jalapeño, cilantro and house mayo. Eight fillings, from $10.95 pickup / $12.95 delivery.</p>
+          <a href="#menu" data-nav="menu" data-cat="banhmi">See Banh Mi →</a>
+        </div>
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1541544181051-e46607bc2d2d?w=900&q=80&auto=format&fit=crop" alt="Fresh spring rolls with dipping sauce" loading="lazy" onerror="this.style.display='none'">
+          <h3>Rolls, fresh or crisp</h3>
+          <p>Garden rolls, crispy rolls, happy rolls and more — most appetizers are $6.95 for two.</p>
+          <a href="#menu" data-nav="menu" data-cat="appetizers">See Appetizers →</a>
+        </div>
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=900&q=80&auto=format&fit=crop" alt="Vietnamese iced coffee" loading="lazy" onerror="this.style.display='none'">
+          <h3>Drinks that finish the meal</h3>
+          <p>Vietnamese coffee, Thai tea, sea-salt drip coffee and bubble drinks in six fruit flavors.</p>
+          <a href="#menu" data-nav="menu" data-cat="drinks">See Drinks →</a>
+        </div>
+      </div>
+
+      <div class="rewards-teaser">
+        <div>
+          <h2>Earn on every bowl.</h2>
+          <p>Get 1 point per $1. At 100 points, take $10 off. Collect Banh Mi stamps — your 6th sandwich is on us. Plus a $5 birthday treat.</p>
+          <a class="btn btn-primary" href="#rewards" data-nav="rewards">Join Free in 30 Seconds</a>
+        </div>
+        <div class="teaser-points"><strong id="teaserPoints">0</strong><span>points in your wallet</span><small>Join or sign in with your phone to see your balance.</small></div>
+      </div>
+
+      <h2 class="section-title">What regulars say</h2>
+      <p class="section-sub">Sample comments the owner can replace with real guest quotes.</p>
+      <div class="testimonial-grid">
+        <blockquote><p>“Our go-to pho spot. The broth is rich, the portions are generous, and the staff remembers us.”</p><footer>Regular since 2021 · Sample quote</footer></blockquote>
+        <blockquote><p>“Banh mi is crisp and fresh every time. The Buy 5 Get 1 deal keeps us coming back.”</p><footer>Regular since 2022 · Sample quote</footer></blockquote>
+        <blockquote><p>“Ordered catering for an office lunch — spring rolls and banh mi platters were gone in minutes.”</p><footer>Regular since 2023 · Sample quote</footer></blockquote>
+      </div>
+
+      <div class="visit-strip">
+        <div><h3>Visit us</h3><p>13073 Wisteria Dr, Germantown, MD 20874<br>Dine-in 10 AM – 8 PM daily · Pickup / Delivery 10 AM – 7:50 PM</p></div>
+        <div class="visit-strip-actions"><a class="btn btn-primary" href="#visit" data-nav="visit">Directions &amp; Hours</a><a class="btn btn-outline" href="tel:+13019165730">Call Us</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section id="view-menu" class="view" aria-label="Menu">
+    <div class="container">
+      <h1>Menu</h1>
+      <p class="section-sub">Choose <strong>Pickup</strong> for in-store prices or <strong>Delivery</strong> for delivery prices — every price on this page, in your cart, and at checkout follows your choice. Pho prices show “+” on Pickup because size / variant upcharges may apply, as on the in-store menu. Delivery prices are flat.</p>
+      <div class="fulfillment-bar" role="group" aria-label="Fulfillment and pricing">
+        <div class="seg-tabs fulfillment-tabs" role="radiogroup" aria-label="Fulfillment mode controls menu pricing">
+          <label><input type="radio" name="fulfillmentMode" value="pickup" data-fulfillment="pickup"> Pickup — In-store prices</label>
+          <label><input type="radio" name="fulfillmentMode" value="delivery" data-fulfillment="delivery"> Delivery — Delivery prices</label>
+        </div>
+        <p id="priceBannerMenu" class="price-banner" role="status"></p>
+      </div>
+      <div class="menu-tools">
+        <label class="search-wrap"><span class="sr-only">Search menu</span><input id="menuSearch" type="search" placeholder="Search pho, banh mi, rolls, drinks…" autocomplete="off"></label>
+        <div class="filters" role="group" aria-label="Menu filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="popular">Popular</button>
+          <button class="filter-btn" data-filter="veggie">Vegetarian</button>
+          <button class="filter-btn" data-filter="spicy">Spicy</button>
+          <button class="filter-btn" data-filter="under15">Under $15</button>
+        </div>
+      </div>
+      <div id="categoryPills" class="pills" role="tablist" aria-label="Menu categories"></div>
+
+      <div id="phoHelper" class="pho-helper">
+        <h2>Build your pho — a quick guide to the cuts</h2>
+        <p>Every pho starts with slow-simmered beef broth and rice noodles, finished with herbs, bean sprouts and lime. Pick your cuts:</p>
+        <ul>
+          <li><strong>Steak (Eye Round):</strong> thin-sliced, lean, cooks in the hot broth.</li>
+          <li><strong>Brisket:</strong> rich and tender, slow-cooked.</li>
+          <li><strong>Flank:</strong> hearty and beefy.</li>
+          <li><strong>Fat Skirt Flank:</strong> extra-rich, for a deeper bowl.</li>
+          <li><strong>Tendon:</strong> soft and silky texture.</li>
+          <li><strong>Tripe:</strong> classic chew, traditional pho texture.</li>
+          <li><strong>Meatball:</strong> springy beef meatballs.</li>
+        </ul>
+        <p class="muted">Not sure? Start with <strong>#1 Dac Biet</strong> (the house combination) or <strong>#15 Eye Round Steak</strong> for a clean, simple bowl. There is no #10 on the menu — it goes from #9 to #11.</p>
+      </div>
+
+      <div id="menuGrid" class="menu-grid"></div>
+      <p id="menuEmpty" class="empty" hidden>No dishes match your search. Try clearing filters.</p>
+      <p class="menu-footnote">Allergy note: please tell us about allergies when ordering. Broths and sauces may contain fish sauce, soy, peanuts or gluten. Ask us and we will help you choose.</p>
+    </div>
+  </section>
+
+  <!-- ============ ORDER / CART ============ -->
+  <section id="view-cart" class="view" aria-label="Order">
+    <div class="container narrow">
+      <h1>Your Order</h1>
+      <p class="section-sub">Pickup or delivery from Pho House, Germantown. Your fulfillment choice sets the price everywhere — menu, cart, and checkout use the same prices. This demo checkout saves your order on this device. Connect Square, Toast or a delivery link to take real payments — see the Owner Guide.</p>
+      <div class="fulfillment-bar" role="group" aria-label="Fulfillment and pricing">
+        <div class="seg-tabs fulfillment-tabs" role="radiogroup" aria-label="Fulfillment mode controls cart pricing">
+          <label><input type="radio" name="fulfillmentMode" value="pickup" data-fulfillment="pickup"> Pickup — In-store prices</label>
+          <label><input type="radio" name="fulfillmentMode" value="delivery" data-fulfillment="delivery"> Delivery — Delivery prices</label>
+        </div>
+        <p id="priceBannerCart" class="price-banner" role="status"></p>
+      </div>
+      <div class="demo-notice"><strong>Demo checkout</strong> — no real payment is taken here. To take live orders, connect Square / Toast / DoorDash. See OWNER-GUIDE.md.</div>
+      <div id="cartPageItems"></div>
+      <div id="cartPageEmpty" class="empty">Your cart is empty. <a href="#menu" data-nav="menu">Browse the menu</a> to add dishes.</div>
+
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <fieldset>
+          <legend>How would you like it?</legend>
+          <div class="seg-tabs" role="radiogroup" aria-label="Order type">
+            <label><input type="radio" name="orderType" value="pickup" checked> Pickup</label>
+            <label><input type="radio" name="orderType" value="delivery"> Delivery</label>
+          </div>
+          <div class="form-row">
+            <label>When? <select id="pickupTime"><option value="asap">ASAP</option><option value="11:30 AM">11:30 AM</option><option value="12:00 PM">12:00 PM</option><option value="12:30 PM">12:30 PM</option><option value="1:00 PM">1:00 PM</option><option value="5:00 PM">5:00 PM</option><option value="5:30 PM">5:30 PM</option><option value="6:00 PM">6:00 PM</option><option value="6:30 PM">6:30 PM</option><option value="7:00 PM">7:00 PM</option></select></label>
+            <label>Tip <select id="tipSelect"><option value="0">No tip</option><option value="0.10">10%</option><option value="0.15" selected>15%</option><option value="0.18">18%</option><option value="0.20">20%</option><option value="custom">Custom</option></select></label>
+          </div>
+          <div class="form-row" id="customTipRow" hidden><label>Custom tip ($) <input id="customTip" type="number" min="0" step="0.50" value="0"></label></div>
+          <div id="deliveryFields" hidden>
+            <label>Delivery address <input id="deliveryAddress" type="text" placeholder="Street, city, ZIP" autocomplete="street-address"></label>
+            <p class="muted small">Delivery fee $3.99 · Free delivery on orders over $50 (before tax). Demo default — owner can change it in menu.js.</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Your details</legend>
+          <div class="form-row"><label>Name <input id="custName" type="text" autocomplete="name" required></label><label>Phone <input id="custPhone" type="tel" autocomplete="tel" placeholder="(301) 000-0000" required></label></div>
+          <label>Order notes <textarea id="orderNotes" rows="2" placeholder="Allergies, spice level, extra herbs, etc."></textarea></label>
+        </fieldset>
+        <fieldset>
+          <legend>Rewards</legend>
+          <label class="check"><input type="checkbox" id="applyReward" disabled> Apply $10 reward (100 points) — <span id="rewardHint">join Rewards to earn</span></label>
+          <label class="check"><input type="checkbox" id="applyBanhMiFree" disabled> Apply free Banh Mi (6th stamp) — <span id="banhMiHint">order Banh Mi to earn stamps</span></label>
+          <p class="muted small">Rewards apply at checkout in this demo and points are added to your local Rewards wallet.</p>
+        </fieldset>
+        <div id="orderSummary" class="summary"></div>
+        <button type="submit" id="placeOrderBtn" class="btn btn-primary btn-lg btn-block">Place Order</button>
+        <p class="muted small center">By placing a demo order you agree this is not a real charge. For a real order, call <a href="tel:+13019165730">(301) 916-5730</a>.</p>
+      </form>
+
+      <div id="orderConfirmation" class="confirmation" hidden>
+        <h2>Order confirmed</h2>
+        <p><strong>Order number: <span id="confirmOrderNo"></span></strong></p>
+        <p id="confirmDetail"></p>
+        <p id="confirmPoints"></p>
+        <div class="confirm-actions"><a class="btn btn-primary" href="#menu" data-nav="menu">Order More</a><a class="btn btn-outline" href="#rewards" data-nav="rewards">View Rewards</a></div>
+      </div>
+
+      <div class="order-history">
+        <h2>Order history on this device</h2>
+        <div id="orderHistoryList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REWARDS ============ -->
+  <section id="view-rewards" class="view" aria-label="Rewards">
+    <div class="container narrow">
+      <h1>Pho House Rewards</h1>
+      <p class="section-sub">Earn 1 point per $1. 100 points = $10 off. Banh Mi Buy 5 Get 1 Free with digital stamps. Birthday treat: $5 off. Free to join.</p>
+      <div class="demo-notice"><strong>Demo loyalty</strong> — your profile, points and stamps live in this browser only (localStorage). To run real loyalty across phones and registers, upgrade to Square Loyalty, Stamp Me or Loopy Loyalty — see OWNER-GUIDE.md.</div>
+
+      <div id="memberSignedOut">
+        <div class="two-col">
+          <form id="joinForm" class="card-form">
+            <h2>Join Rewards</h2>
+            <label>Name <input id="joinName" type="text" autocomplete="name" required></label>
+            <label>Phone <input id="joinPhone" type="tel" autocomplete="tel" required></label>
+            <label>Email <input id="joinEmail" type="email" autocomplete="email"></label>
+            <label>Birthday (for your $5 treat) <input id="joinBirthday" type="date"></label>
+            <button class="btn btn-primary btn-block" type="submit">Join Free</button>
+            <p class="muted small">We only use this to find your rewards at pickup. No spam.</p>
+          </form>
+          <form id="signInForm" class="card-form">
+            <h2>Already a member?</h2>
+            <p class="muted">Enter the phone you joined with.</p>
+            <label>Phone <input id="signInPhone" type="tel" autocomplete="tel" required></label>
+            <button class="btn btn-outline btn-block" type="submit">Sign In With Phone</button>
+            <p id="signInMsg" class="muted small" role="status"></p>
+          </form>
+        </div>
+      </div>
+
+      <div id="memberSignedIn" hidden>
+        <div class="member-card">
+          <div class="member-card-top"><div><p class="eyebrow">Pho House Member</p><h2 id="memberName">Member</h2><p id="memberNumber" class="member-no"></p><p id="memberTier" class="tier-badge"></p></div><div class="qr-box" aria-hidden="true" id="qrPattern"></div></div>
+          <div class="member-stats"><div><strong id="pointsBalance">0</strong><span>points</span></div><div><strong id="pointsToNext">100</strong><span>to next $10 reward</span></div><div><strong id="banhMiCount">0 / 5</strong><span>Banh Mi stamps</span></div></div>
+          <div class="progress"><div id="progressBar" class="progress-fill" style="width:0%"></div></div>
+          <p id="birthdayNote" class="muted small"></p>
+          <div class="member-actions"><button id="redeemBtn" class="btn btn-primary">Redeem $10 Reward (100 pts)</button><button id="signOutBtn" class="btn btn-outline">Sign Out</button></div>
+          <div id="couponArea"></div>
+        </div>
+
+        <div class="stamp-card">
+          <h2>Banh Mi Stamp Card — Buy 5 Get 1 Free</h2>
+          <p class="muted">One stamp per Banh Mi ordered. At 5 stamps, your 6th Banh Mi is free at checkout.</p>
+          <div id="stampRow" class="stamps"></div>
+          <p id="stampText" class="muted"></p>
+        </div>
+
+        <form id="receiptForm" class="card-form">
+          <h2>Add a receipt</h2>
+          <p class="muted">Ate in-store without ordering here? Enter your receipt total to earn points.</p>
+          <div class="form-row"><label>Receipt total ($) <input id="receiptTotal" type="number" min="0" step="0.01" required></label><label>Receipt date <input id="receiptDate" type="date"></label></div>
+          <button class="btn btn-primary" type="submit">Add Points</button>
+          <p id="receiptMsg" class="muted small" role="status"></p>
+        </form>
+
+        <div class="tiers">
+          <h2>Tiers</h2>
+          <div class="tier-grid"><div><strong>Pho Fan</strong><span>0 – 249 pts</span><p>Join + birthday treat</p></div><div><strong>Pho Lover</strong><span>250 – 599 pts</span><p>Early taste of new specials</p></div><div><strong>Pho VIP</strong><span>600+ pts</span><p>VIP-only offers + priority catering</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATERING ============ -->
+  <section id="view-catering" class="view" aria-label="Catering">
+    <div class="container narrow">
+      <h1>Catering</h1>
+      <p class="section-sub">Pho bars, banh mi platters and spring-roll platters for offices, parties and family gatherings in Germantown and nearby. Typical guidance: $14 – $22 per person depending on package and guest count. Tell us your date and we will confirm menu and pricing.</p>
+      <div class="catering-grid">
+        <div class="cat-card"><h3>Pho Bar</h3><p>Hot broth, noodles and toppings set up so guests build their own bowls.</p><strong>From ~$18 / person</strong></div>
+        <div class="cat-card"><h3>Banh Mi Platter</h3><p>Assorted toasted banh mi, cut for sharing, with pickled vegetables.</p><strong>From ~$14 / person</strong></div>
+        <div class="cat-card"><h3>Spring Roll Platter</h3><p>Fresh and crispy rolls with peanut and fish sauces.</p><strong>From ~$14 / person</strong></div>
+        <div class="cat-card"><h3>Custom</h3><p>Mix pho, rolls, rice plates, drinks and desserts for your event.</p><strong>$14 – $22 / person</strong></div>
+      </div>
+      <form id="cateringForm" class="card-form">
+        <h2>Request catering</h2>
+        <div class="form-row"><label>Name <input id="catName" type="text" required></label><label>Phone <input id="catPhone" type="tel" required></label></div>
+        <label>Email <input id="catEmail" type="email"></label>
+        <div class="form-row"><label>Event date <input id="catDate" type="date" required></label><label>Guests <input id="catGuests" type="number" min="10" value="30" required></label></div>
+        <label>Package <select id="catPackage"><option>Pho Bar</option><option>Banh Mi Platter</option><option>Spring Roll Platter</option><option>Custom</option></select></label>
+        <label>Details <textarea id="catDetails" rows="3" placeholder="Venue, time, dietary needs, budget…"></textarea></label>
+        <button class="btn btn-primary btn-block" type="submit">Send Catering Request</button>
+        <p class="muted small">This saves your request on this device and opens an email to the restaurant as a backup. For fastest response, call <a href="tel:+13019165730">(301) 916-5730</a>.</p>
+      </form>
+      <div id="cateringConfirm" class="confirmation" hidden><h2>Request received</h2><p id="cateringConfirmText"></p><a class="btn btn-outline" href="mailto:phohousegermantown@gmail.com">Email the Restaurant Instead</a></div>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section id="view-visit" class="view" aria-label="Visit">
+    <div class="container">
+      <h1>Visit Pho House</h1>
+      <div class="visit-grid">
+        <div>
+          <p><strong>13073 Wisteria Dr<br>Germantown, MD 20874</strong></p>
+          <p id="openNowBadge" class="open-badge" role="status">Checking hours…</p>
+          <table class="hours-table" aria-label="Hours">
+            <tr><th>Sunday</th><td>10:00 AM – 8:00 PM (Dine-in) · Pickup / Delivery until 7:50 PM</td></tr>
+            <tr><th>Monday</th><td>10:00 AM – 8:00 PM (Dine-in) · Pickup / Delivery until 7:50 PM</td></tr>
+            <tr><th>Tuesday</th><td>10:00 AM – 8:00 PM (Dine-in) · Pickup / Delivery until 7:50 PM</td></tr>
+            <tr><th>Wednesday</th><td>10:00 AM – 8:00 PM (Dine-in) · Pickup / Delivery until 7:50 PM</td></tr>
+            <tr><th>Thursday</th><td>10:00 AM – 8:00 PM (Dine-in) · Pickup / Delivery until 7:50 PM</td></tr>
+            <tr><th>Friday</th><td>10:00 AM – 8:00 PM (Dine-in) · Pickup / Delivery until 7:50 PM</td></tr>
+            <tr><th>Saturday</th><td>10:00 AM – 8:00 PM (Dine-in) · Pickup / Delivery until 7:50 PM</td></tr>
+          </table>
+          <div class="contact-cards">
+            <a href="tel:+13019165730" class="contact-card"><strong>Call</strong><span>(301) 916-5730</span></a>
+            <a href="https://www.google.com/maps/search/?api=1&query=13073+Wisteria+Dr+Germantown+MD+20874" target="_blank" rel="noopener" class="contact-card"><strong>Directions</strong><span>Open in Google Maps</span></a>
+            <a href="mailto:phohousegermantown@gmail.com" class="contact-card"><strong>Email</strong><span>phohousegermantown@gmail.com</span></a>
+          </div>
+          <h2>We serve</h2>
+          <div id="serviceAreas" class="chips"></div>
+          <p class="muted small">Lunch + Dinner · Delivery + Takeout · Catering · Price: $$</p>
+        </div>
+        <div>
+          <iframe title="Map to Pho House, 13073 Wisteria Dr, Germantown MD" src="https://www.google.com/maps?q=13073+Wisteria+Dr,+Germantown,+MD+20874&output=embed" width="100%" height="340" style="border:0;border-radius:16px" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h2>Good to know</h2>
+          <div class="faq" id="faqList">
+            <details><summary>Do you offer dine-in?</summary><p>Yes — dine-in every day 10:00 AM – 8:00 PM.</p></details>
+            <details><summary>How late can I order pickup or delivery?</summary><p>Pickup and delivery orders run 10:00 AM – 7:50 PM daily.</p></details>
+            <details><summary>Do you have vegetarian options?</summary><p>Yes — veggie pho, veggie garden rolls, crispy veggie rolls and tofu banh mi. Ask about fish sauce and broth if you eat strictly vegetarian.</p></details>
+            <details><summary>How does the Banh Mi Buy 5 Get 1 Free deal work?</summary><p>Buy five banh mi to-go and the sixth is free. Join Rewards to track stamps digitally — one stamp per banh mi ordered.</p></details>
+            <details><summary>Do you cater?</summary><p>Yes — pho bars, banh mi platters and spring-roll platters. See the Catering page for a quote.</p></details>
+            <details><summary>What areas do you deliver to?</summary><p>Germantown, Gaithersburg, Clarksburg, Montgomery Village, Boyds, Clopper, Middlebrook and nearby. Call if you are just outside the area.</p></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div><strong>Pho House</strong><p>13073 Wisteria Dr, Germantown, MD 20874<br><a href="tel:+13019165730">(301) 916-5730</a> · <a href="mailto:phohousegermantown@gmail.com">phohousegermantown@gmail.com</a></p></div>
+    <div><strong>Hours</strong><p>Dine-in: 10:00 AM – 8:00 PM daily<br>Pickup / Delivery: 10:00 AM – 7:50 PM daily</p></div>
+    <div><strong>Quick links</strong><p><a href="#menu" data-nav="menu">Menu</a> · <a href="#rewards" data-nav="rewards">Rewards</a> · <a href="#catering" data-nav="catering">Catering</a> · <a href="#visit" data-nav="visit">Visit</a></p><p class="muted small">Owner demo — see OWNER-GUIDE.md for how to edit prices, deploy and connect real ordering.</p></div>
+  </div>
+  <p class="footer-small">© Pho House · Prices depend on Pickup vs. Delivery — pick one on the Menu page and every price follows it. Menu items and hours subject to change — confirm by phone for large orders.</p>
+</footer>
+
+<!-- Cart drawer -->
+<div id="cartOverlay" class="overlay" hidden></div>
+<aside id="cartDrawer" class="drawer" aria-label="Cart" aria-hidden="true">
+  <div class="drawer-head"><h2>Your Cart</h2><button id="cartCloseBtn" class="icon-btn" aria-label="Close cart">×</button></div>
+  <div id="cartItems" class="drawer-items"></div>
+  <div id="cartDrawerEmpty" class="empty">Cart is empty.</div>
+  <div id="cartDrawerSummary" class="summary"></div>
+  <div class="drawer-foot"><a class="btn btn-primary btn-block" href="#cart" data-nav="cart">Review &amp; Checkout</a><button id="cartClearBtn" class="btn btn-ghost btn-block">Clear Cart</button></div>
+</aside>
+
+<!-- iOS install sheet -->
+<div id="iosSheet" class="sheet" hidden role="dialog" aria-label="Install app instructions">
+  <div class="sheet-inner"><button id="iosClose" class="icon-btn" aria-label="Close">×</button><h2>Add Pho House to your Home Screen</h2><ol><li>Tap <strong>Share</strong> in Safari.</li><li>Tap <strong>Add to Home Screen</strong>.</li><li>Tap <strong>Add</strong>. The app opens full-screen like a native app.</li></ol><button id="iosDone" class="btn btn-primary btn-block">Got It</button></div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="menu.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
